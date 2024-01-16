@@ -11,9 +11,8 @@ const info = {
   	phone: '0888827768'
 };
 ```
-<details>
-  <summary>More</summary>
-	
+![Metrics](https://metrics.lecoq.io/?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&config.timezone=Asia%2FBangkok)
+
 ## GitHub 🖥️
 [![Stats](/metrics.classic.svg "GitHub stats")](#)
 
@@ -29,3 +28,6 @@ const info = {
 ## Website 🌐
 [![Website](/metrics.website.svg "Website")](https://xwork.space)
 </details>
+
+<!-- ily tMai -->
+
