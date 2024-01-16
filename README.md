@@ -1,5 +1,3 @@
-### Hi there 👋
-
 ```
 const info = {
 	fullName: 'Vu Cong Long',
@@ -11,6 +9,7 @@ const info = {
   	phone: '0888827768'
 };
 ```
+<img src="/metrics.svg" width="100%">
 ![Metrics](/metrics.svg)
 
 <!-- ily tm -->
