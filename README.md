@@ -11,19 +11,7 @@ const info = {
   	phone: '0888827768'
 };
 ```
-## GitHub 🖥️
-
-## Achievements
-![Metrics](/achievements.svg)
-
-## Recent activities
-[![Activities](/metrics.activity.svg "GitHub activities")](#)
-
-
-
-## Featured repositories 🌟
-[![Repositories](/metrics.plugin.repositories.svg "Repositories")](#)
-
+![Metrics](/metrics.svg)
 
 <!-- ily tm -->
 
