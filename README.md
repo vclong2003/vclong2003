@@ -10,7 +10,7 @@ const info = {
 };
 ```
 <p align="center">
-<img src="/metrics.svg" width="60%" alt="">
+<img src="/github-metrics.svg" width="65%" alt="">
 </p>
 
 
