@@ -11,19 +11,21 @@ const info = {
   	phone: '0888827768'
 };
 ```
+<details>
+  <summary>More</summary>
+	
+## GitHub 🖥️
+[![Stats](/metrics.classic.svg "GitHub stats")](#)
 
+## Recent activities
+[![Activities](/metrics.activity.svg "GitHub activities")](#)
 
-<!--
-**vclong2003/vclong2003** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## WakaTime
+[![WakaTime](/metrics.plugin.wakatime.svg "WakaTime")](#)
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Featured repositories 🌟
+[![Repositories](/metrics.plugin.repositories.svg "Repositories")](#)
+	
+## Website 🌐
+[![Website](/metrics.website.svg "Website")](https://xwork.space)
+</details>
