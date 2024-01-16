@@ -9,8 +9,7 @@ const info = {
   	phone: '0888827768'
 };
 ```
-<img src="/metrics.svg" width="100%">
-![Metrics](/metrics.svg)
+<img src="/metrics.svg" width="100%" alt="">
 
 <!-- ily tm -->
 
