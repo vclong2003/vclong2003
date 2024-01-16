@@ -11,9 +11,8 @@ const info = {
   	phone: '0888827768'
 };
 ```
-![Metrics](/github-metrics.svg)
 ## GitHub 🖥️
-[![Stats](/metrics.classic.svg "GitHub stats")](#)
+![Metrics](/github-metrics.svg)
 
 ## Recent activities
 [![Activities](/metrics.activity.svg "GitHub activities")](#)
