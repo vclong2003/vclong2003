@@ -11,6 +11,10 @@ const info = {
   	phone: '0888827768'
 };
 ```
+
+<picture>
+  <img src="/github-metrics.svg" alt="Metrics">
+</picture>
 ## GitHub 🖥️
 ![Metrics](/github-metrics.svg)
 
