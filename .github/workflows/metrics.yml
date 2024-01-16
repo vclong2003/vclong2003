@@ -9,7 +9,7 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-     environment: 
+    environment: 
       name: production
     permissions:
       contents: write
