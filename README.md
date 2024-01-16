@@ -12,20 +12,18 @@ const info = {
 };
 ```
 ## GitHub 🖥️
-![Metrics](/github-metrics.svg)
+
+## Achievements
+![Metrics](/achievements.svg)
 
 ## Recent activities
 [![Activities](/metrics.activity.svg "GitHub activities")](#)
 
-## WakaTime
-[![WakaTime](/metrics.plugin.wakatime.svg "WakaTime")](#)
+
 
 ## Featured repositories 🌟
 [![Repositories](/metrics.plugin.repositories.svg "Repositories")](#)
-	
-## Website 🌐
-[![Website](/metrics.website.svg "Website")](https://xwork.space)
-</details>
+
 
 <!-- ily tm -->
 
