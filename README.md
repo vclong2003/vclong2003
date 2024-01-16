@@ -8,7 +8,7 @@ const info = {
 	occupation: 'University Student',
 	interests: ['js', 'ts', 'nodejs', 'reactjs', 'mongodb'],
 	email: 'vclong2003@gmail.com',
-  phone: '0888827768'
+  	phone: '0888827768'
 };
 ```
 
