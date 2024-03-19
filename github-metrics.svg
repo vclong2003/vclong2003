@@ -19,7 +19,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            1534 Commits
+                            1537 Commits
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -181,14 +181,14 @@
                         <rect x="0" y="0" width="920" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="478.3553070920227" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="478.3553070920227" y="0" width="217.52074946099103" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="695.8760565530137" y="0" width="93.9756921256988" height="8" fill="#178600"/>
-                    <rect mask="url(#languages-bar)" x="789.8517486787125" y="0" width="78.16450745072599" height="8" fill="#4F5D95"/>
-                    <rect mask="url(#languages-bar)" x="868.0162561294385" y="0" width="42.01713380778844" height="8" fill="#b07219"/>
-                    <rect mask="url(#languages-bar)" x="910.033389937227" y="0" width="4.863101257369636" height="8" fill="#c1d026"/>
-                    <rect mask="url(#languages-bar)" x="914.8964911945966" y="0" width="3.4221823662971516" height="8" fill="#438eff"/>
-                    <rect mask="url(#languages-bar)" x="918.3186735608938" y="0" width="1.6813264391062945" height="8" fill="#a86454"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="476.3994441516125" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="476.3994441516125" y="0" width="220.392993402192" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="696.7924375538045" y="0" width="93.59145143514304" height="8" fill="#178600"/>
+                    <rect mask="url(#languages-bar)" x="790.3838889889475" y="0" width="77.84491433424597" height="8" fill="#4F5D95"/>
+                    <rect mask="url(#languages-bar)" x="868.2288033231936" y="0" width="41.845337334207976" height="8" fill="#b07219"/>
+                    <rect mask="url(#languages-bar)" x="910.0741406574015" y="0" width="4.843217377367189" height="8" fill="#c1d026"/>
+                    <rect mask="url(#languages-bar)" x="914.9173580347688" y="0" width="3.4081900062954293" height="8" fill="#438eff"/>
+                    <rect mask="url(#languages-bar)" x="918.3255480410642" y="0" width="1.6744519589359568" height="8" fill="#a86454"/>
                 </svg>
                 <div class="field center horizontal-wrap fill-width">
                     <div class="field center no-wrap language">
@@ -1323,27 +1323,7 @@
                                 <div class="details">
                                     <div>on branch <span class="code">master</span></div>
                                     <div class="commit">
-                                        <div class="sha">#4b9b3f1</div>
-                                        <div class="message">backUp</div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="row fill-width">
-                            <section class="activity">
-                                <div class="field">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
-                                    </svg>
-                                    <div class="content">
-                                        Pushed 1 commit in
-                                        <span class="repo">vclong2003/login-demo</span>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <div>on branch <span class="code">master</span></div>
-                                    <div class="commit">
-                                        <div class="sha">#bfb6193</div>
+                                        <div class="sha">#790ecd1</div>
                                         <div class="message">ok</div>
                                     </div>
                                 </div>
@@ -1363,27 +1343,7 @@
                                 <div class="details">
                                     <div>on branch <span class="code">master</span></div>
                                     <div class="commit">
-                                        <div class="sha">#a9089ed</div>
-                                        <div class="message">backUp</div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="row fill-width">
-                            <section class="activity">
-                                <div class="field">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
-                                    </svg>
-                                    <div class="content">
-                                        Pushed 1 commit in
-                                        <span class="repo">vclong2003/login-demo</span>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <div>on branch <span class="code">master</span></div>
-                                    <div class="commit">
-                                        <div class="sha">#4740967</div>
+                                        <div class="sha">#2c81634</div>
                                         <div class="message">ok</div>
                                     </div>
                                 </div>
@@ -1403,8 +1363,48 @@
                                 <div class="details">
                                     <div>on branch <span class="code">master</span></div>
                                     <div class="commit">
-                                        <div class="sha">#cfccdb6</div>
-                                        <div class="message">backUp</div>
+                                        <div class="sha">#8818a3e</div>
+                                        <div class="message">ok</div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row fill-width">
+                            <section class="activity">
+                                <div class="field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
+                                    </svg>
+                                    <div class="content">
+                                        Pushed 1 commit in
+                                        <span class="repo">vclong2003/comp1640-fe</span>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>on branch <span class="code">dev</span></div>
+                                    <div class="commit">
+                                        <div class="sha">#da177e2</div>
+                                        <div class="message">fixes</div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row fill-width">
+                            <section class="activity">
+                                <div class="field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
+                                    </svg>
+                                    <div class="content">
+                                        Pushed 1 commit in
+                                        <span class="repo">vclong2003/comp1640-fe</span>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>on branch <span class="code">dev</span></div>
+                                    <div class="commit">
+                                        <div class="sha">#324356c</div>
+                                        <div class="message">fixes</div>
                                     </div>
                                 </div>
                             </section>
@@ -1466,7 +1466,7 @@
                                     </defs>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="gauge info">
                                         <circle class="gauge-base" r="25" cx="28" cy="28"/>
-                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="3.4099999999999997 155"/>
+                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="3.72 155"/>
                                     </svg>
                                     <svg xmlns="http://www.w3.org/2000/svg" mask="url(#mask)">
                                         <g stroke-width="2" fill="none" fill-rule="evenodd">
@@ -1488,10 +1488,10 @@
                                     <span class="prefix">Super</span>
                                     deployer
                                     <div class="value-wrapper">
-                                        <div class="value">511</div>
+                                        <div class="value">512</div>
                                     </div>
                                 </div>
-                                <div class="text">Repositories have been deployed 511 times</div>
+                                <div class="text">Repositories have been deployed 512 times</div>
                             </div>
                         </div>
                         <div class="achievement b largeable-width-half">
@@ -1911,7 +1911,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Inspirer
-                                    <span class="gh">ranked 5.18m out of 83.6m repositories</span>
+                                    <span class="gh">ranked 5.18m out of 84.4m repositories</span>
                                     <div class="value-wrapper">
                                         <div class="value">1</div>
                                     </div>
