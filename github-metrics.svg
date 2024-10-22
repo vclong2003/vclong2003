@@ -19,7 +19,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            2423 Commits
+                            2424 Commits
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -127,7 +127,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                         <path fill-rule="evenodd" d="M2.75 1.5a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H2.75zM1 1.75C1 .784 1.784 0 2.75 0h7.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V1.75zm7 1.5a.75.75 0 01.75.75v1.5h1.5a.75.75 0 010 1.5h-1.5v1.5a.75.75 0 01-1.5 0V7h-1.5a.75.75 0 010-1.5h1.5V4A.75.75 0 018 3.25zm-3 8a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75z"/>
                                     </svg>
-                                    75.2k added, 16.7k removed
+                                    129k added, 54.1k removed
                                 </div>
                             </section>
                             <section>
@@ -159,7 +159,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                         <path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"/>
                                     </svg>
-                                    143 views in last two weeks
+                                    145 views in last two weeks
                                 </div>
                             </section>
                         </div>
@@ -181,14 +181,14 @@
                         <rect x="0" y="0" width="920" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="373.82990981198805" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="373.82990981198805" y="0" width="327.66474873638833" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="701.4946585483764" y="0" width="71.06189722379328" height="8" fill="#A97BFF"/>
-                    <rect mask="url(#languages-bar)" x="772.5565557721698" y="0" width="59.656626233199674" height="8" fill="#178600"/>
-                    <rect mask="url(#languages-bar)" x="832.2131820053694" y="0" width="49.61954203490191" height="8" fill="#4F5D95"/>
-                    <rect mask="url(#languages-bar)" x="881.8327240402713" y="0" width="26.672859654056353" height="8" fill="#b07219"/>
-                    <rect mask="url(#languages-bar)" x="908.5055836943276" y="0" width="5.98242581843804" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="914.4880095127656" y="0" width="5.511990487234336" height="8" fill="#438eff"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="374.12398779964684" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="374.12398779964684" y="0" width="327.48832203037455" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="701.6123098300213" y="0" width="71.02363489469431" height="8" fill="#A97BFF"/>
+                    <rect mask="url(#languages-bar)" x="772.6359447247156" y="0" width="59.624504919879264" height="8" fill="#178600"/>
+                    <rect mask="url(#languages-bar)" x="832.2604496445949" y="0" width="49.59282505546213" height="8" fill="#4F5D95"/>
+                    <rect mask="url(#languages-bar)" x="881.853274700057" y="0" width="26.658498009152897" height="8" fill="#b07219"/>
+                    <rect mask="url(#languages-bar)" x="908.5117727092099" y="0" width="5.979204661187561" height="8" fill="#3572A5"/>
+                    <rect mask="url(#languages-bar)" x="914.4909773703974" y="0" width="5.509022629602436" height="8" fill="#438eff"/>
                 </svg>
                 <div class="field center horizontal-wrap fill-width">
                     <div class="field center no-wrap language">
@@ -1421,7 +1421,7 @@
                                     </defs>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="gauge info">
                                         <circle class="gauge-base" r="25" cx="28" cy="28"/>
-                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="85.76666666666667 155"/>
+                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="85.87 155"/>
                                     </svg>
                                     <svg xmlns="http://www.w3.org/2000/svg" mask="url(#mask)">
                                         <g stroke-width="2" fill="none" fill-rule="evenodd">
@@ -1443,10 +1443,10 @@
                                     <span class="prefix">Master</span>
                                     deployer
                                     <div class="value-wrapper">
-                                        <div class="value">1830</div>
+                                        <div class="value">1831</div>
                                     </div>
                                 </div>
-                                <div class="text">Repositories have been deployed 1830 times</div>
+                                <div class="text">Repositories have been deployed 1831 times</div>
                             </div>
                         </div>
                         <div class="achievement s largeable-width-half">
@@ -1558,7 +1558,7 @@
                                 <div class="title">
                                     <span class="prefix">Great</span>
                                     developer
-                                    <span class="gh">ranked 1.95m out of 147m users</span>
+                                    <span class="gh">ranked 1.95m out of 145m users</span>
                                     <div class="value-wrapper">
                                         <div class="value">28</div>
                                     </div>
@@ -1657,7 +1657,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Influencer
-                                    <span class="gh">ranked 177k out of 147m users</span>
+                                    <span class="gh">ranked 177k out of 145m users</span>
                                     <div class="value-wrapper">
                                         <div class="value">72</div>
                                     </div>
@@ -1937,7 +1937,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Inspirer
-                                    <span class="gh">ranked 5.42m out of 222m repositories</span>
+                                    <span class="gh">ranked 5.42m out of 214m repositories</span>
                                     <div class="value-wrapper">
                                         <div class="value">1</div>
                                     </div>
