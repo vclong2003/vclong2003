@@ -27,13 +27,13 @@ jobs:
           config_twemoji: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
-          plugin_activity: yes
-          plugin_activity_days: 14
-          plugin_activity_filter: all
-          plugin_activity_limit: 5
-          plugin_activity_load: 300
-          plugin_activity_skipped: vclong2003
-          plugin_activity_visibility: all
+          # plugin_activity: yes
+          # plugin_activity_days: 14
+          # plugin_activity_filter: all
+          # plugin_activity_limit: 5
+          # plugin_activity_load: 300
+          # plugin_activity_skipped: vclong2003
+          # plugin_activity_visibility: all
           plugin_languages: yes
           plugin_languages_ignored: html, css
           plugin_languages_analysis_timeout: 15
