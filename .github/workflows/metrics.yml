@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
-          template: classic
+          template: repository
           base: activity, community, repositories
           config_display: large
           config_octicon: yes
@@ -27,7 +27,7 @@ jobs:
           config_twemoji: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
-          # plugin_activity: yes
+          plugin_activity: no
           # plugin_activity_days: 14
           # plugin_activity_filter: all
           # plugin_activity_limit: 5
