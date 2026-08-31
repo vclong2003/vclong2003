@@ -1,6 +1,5 @@
 ## Hi there 👋
 I'm Long, a developer from Vietnam. I'm passionate about web development, self-hosting, and building software to solve real-world problems.
-
 Check out my homelab and personal services at [vclab.uk](https://vclab.uk).
 
 <p align='center'>
