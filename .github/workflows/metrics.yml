@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          use_prebuilt_image: no
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
