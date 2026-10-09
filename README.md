@@ -10,4 +10,4 @@ I'm Long, a developer from Vietnam. I'm passionate about web development, self-h
 </p>
 
 
-<!-- btw ily tm -->
+<!-- You can't vibe code passion -->
