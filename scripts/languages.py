@@ -5,7 +5,7 @@ from html import escape
 TOKEN = os.environ["METRICS_TOKEN"]
 USER = os.environ["GH_USER"]
 IGNORE = {"HTML", "CSS"}
-TOP = 10
+TOP = 8
 
 
 COLORS = {
