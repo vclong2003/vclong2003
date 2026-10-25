@@ -7,7 +7,7 @@ import urllib.request
 TOKEN = os.environ["METRICS_TOKEN"]
 USER = os.environ["GH_USER"]
 IGNORE = {"HTML", "CSS"}
-TOP = 6
+TOP = 8 
 
 INCLUDE_ORGS = True
 INCLUDE_FORKS = False
@@ -99,14 +99,16 @@ rows = [(lang, n) for lang, n in top]
 if rest > 0:
     rows.append(("Other", rest))
 
-# Layout Dimensions
-CARD_WIDTH = 460
-BAR_WIDTH = 400
-BAR_X = 30
-BAR_Y = 66
-BAR_HEIGHT = 10
-GRID_START_Y = 104
-ROW_HEIGHT = 28
+# --- Compact Layout Dimensions ---
+CARD_WIDTH = 420
+PADDING_X = 24
+BAR_WIDTH = CARD_WIDTH - (PADDING_X * 2)  # 372px
+BAR_X = PADDING_X
+BAR_Y = 54
+BAR_HEIGHT = 8
+BAR_RADIUS = 4
+GRID_START_Y = 82
+ROW_HEIGHT = 22
 
 # Render Bar Segments
 bar_segments = []
@@ -119,9 +121,9 @@ for lang, n in rows:
     )
     current_x += w
 
-# Render Language 2-Column Grid
+# Render Language Grid (2 Columns)
 legend = []
-COL_X = [30, 240]
+COL_X = [24, 218]  # Balanced two columns
 
 for i, (lang, n) in enumerate(rows):
     col = i % 2
@@ -132,16 +134,17 @@ for i, (lang, n) in enumerate(rows):
     color = OTHER_COLOR if lang == "Other" else COLORS.get(lang, FALLBACK)
     pct = (n / grand) * 100
 
-    legend.append(f'<circle cx="{x + 5}" cy="{y - 4}" r="5" fill="{color}"/>')
+    # Compact 4px radius dot aligned to 12px text baseline
+    legend.append(f'<circle cx="{x + 4}" cy="{y - 4}" r="4" fill="{color}"/>')
     legend.append(
-        f'<text x="{x + 18}" y="{y}" class="lang-name">{escape(lang)}</text>'
+        f'<text x="{x + 16}" y="{y}" class="lang-name">{escape(lang)}</text>'
     )
     legend.append(
-        f'<text x="{x + 175}" y="{y}" class="lang-pct">{pct:.1f}%</text>'
+        f'<text x="{x + 172}" y="{y}" class="lang-pct">{pct:.1f}%</text>'
     )
 
 total_rows = (len(rows) + 1) // 2
-card_height = GRID_START_Y + (total_rows * ROW_HEIGHT) + 18
+card_height = GRID_START_Y + (total_rows * ROW_HEIGHT) + 6
 
 svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{card_height}" viewBox="0 0 {CARD_WIDTH} {card_height}">
   <style>
@@ -151,7 +154,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{
       --track: #ebedf0;
       --title: #1f2328;
       --sub: #656d76;
-      --pct: #57606a;
+      --pct: #656d76;
     }}
     @media (prefers-color-scheme: dark) {{
       :root {{
@@ -160,33 +163,33 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{
         --track: #21262d;
         --title: #f0f6fc;
         --sub: #8b949e;
-        --pct: #7d8590;
+        --pct: #8b949e;
       }}
     }}
-    .bg {{ fill: var(--bg); stroke: var(--border); stroke-width: 1px; rx: 4px; }}
-    .title {{ font: 600 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
-    .sub {{ font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--sub); }}
-    .lang-name {{ font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
-    .lang-pct {{ font: 400 12.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--pct); text-anchor: end; }}
+    .bg {{ fill: var(--bg); stroke: var(--border); stroke-width: 1px; rx: 6px; }}
+    .title {{ font: 600 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
+    .sub {{ font: 400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--sub); }}
+    .lang-name {{ font: 500 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
+    .lang-pct {{ font: 400 11.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--pct); text-anchor: end; }}
   </style>
 
   <!-- Card Background -->
   <rect width="{CARD_WIDTH}" height="{card_height}" class="bg"/>
 
   <!-- Card Header -->
-  <text x="30" y="32" class="title">Most Used Languages</text>
-  <text x="30" y="48" class="sub">Across all {repo_count} repositories</text>
+  <text x="{PADDING_X}" y="26" class="title">Most Used Languages</text>
+  <text x="{PADDING_X}" y="40" class="sub">Across all {repo_count} repositories</text>
 
-  <!-- Progress Bar (Fixed Clip Path) -->
+  <!-- Progress Bar -->
   <defs>
     <clipPath id="bar-clip">
-      <rect x="0" y="0" width="{BAR_WIDTH}" height="{BAR_HEIGHT}" rx="5" ry="5"/>
+      <rect x="0" y="0" width="{BAR_WIDTH}" height="{BAR_HEIGHT}" rx="{BAR_RADIUS}" ry="{BAR_RADIUS}"/>
     </clipPath>
   </defs>
 
-  <!-- Background Track + Colored Segments -->
+  <!-- Bar Track + Segments -->
   <g transform="translate({BAR_X}, {BAR_Y})">
-    <rect width="{BAR_WIDTH}" height="{BAR_HEIGHT}" rx="5" fill="var(--track)"/>
+    <rect width="{BAR_WIDTH}" height="{BAR_HEIGHT}" rx="{BAR_RADIUS}" fill="var(--track)"/>
     <g clip-path="url(#bar-clip)">
       {''.join(bar_segments)}
     </g>
