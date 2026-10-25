@@ -8,6 +8,7 @@ permissions:
 jobs:
   languages:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - uses: actions/checkout@v7
       - run: python3 scripts/languages.py
