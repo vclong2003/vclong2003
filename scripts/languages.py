@@ -73,7 +73,7 @@ def color(lang):
         return OTHER
     return COLORS.get(lang, FALLBACK)
 
-WIDTH = 360
+WIDTH = 800
 BAR_Y = 34
 BAR_H = 8
 ROW_Y = 62
