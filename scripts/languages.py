@@ -7,12 +7,12 @@ USER = os.environ["GH_USER"]
 IGNORE = {"HTML", "CSS"}
 TOP = 8
 
-# Fixed colors per language, so they never change when rankings shift
 COLORS = {
     "JavaScript": "#f1e05a",
     "TypeScript": "#3178c6",
     "Python": "#3572A5",
     "Java": "#b07219",
+    "Kotlin": "#A97BFF",
     "C#": "#178600",
     "PHP": "#4F5D95",
     "Go": "#00ADD8",
@@ -21,14 +21,13 @@ COLORS = {
     "Dart": "#00B4AB",
     "Objective-C": "#438eff",
     "Twig": "#c1d026",
-    "Kotlin": "#A97BFF",
     "Swift": "#F05138",
     "Ruby": "#701516",
     "C++": "#f34b7d",
     "C": "#555555",
 }
 FALLBACK = "#999999"
-OTHER_COLOR = "#cccccc"
+OTHER = "#cccccc"
 
 def api(url):
     req = urllib.request.Request(url, headers={
@@ -67,43 +66,48 @@ rest = grand - sum(n for _, n in top)
 
 rows = [(lang, n, len(repos_using[lang])) for lang, n in top]
 if rest > 0:
-    rows.append(("Other", rest, None))
+    rows.append(("Other", rest, 0))
 
-WIDTH = 520
-BAR_Y = 56
-ROWS_Y = 100
-ROW = 22
+def color(lang):
+    if lang == "Other":
+        return OTHER
+    return COLORS.get(lang, FALLBACK)
 
-bar = []
+WIDTH = 360
+BAR_Y = 34
+BAR_H = 8
+ROW_Y = 62
+ROW = 16
+
+bar, legend = [], []
 x = 0.0
 for lang, n, _ in rows:
-    color = OTHER_COLOR if lang == "Other" else COLORS.get(lang, FALLBACK)
     w = WIDTH * n / grand
-    bar.append(f'<rect x="{x:.2f}" y="{BAR_Y}" width="{w:.2f}" height="14" fill="{color}"/>')
+    bar.append(f'<rect x="{x:.2f}" y="{BAR_Y}" width="{w:.2f}" height="{BAR_H}" fill="{color(lang)}"/>')
     x += w
 
-legend = []
 for i, (lang, n, nrepos) in enumerate(rows):
-    y = ROWS_Y + i * ROW
-    color = OTHER_COLOR if lang == "Other" else COLORS.get(lang, FALLBACK)
+    y = ROW_Y + i * ROW
     pct = 100 * n / grand
     repos_text = f"{nrepos} repos" if nrepos else ""
-    legend.append(f'<rect x="10" y="{y - 9}" width="10" height="10" fill="{color}"/>')
-    legend.append(f'<text x="28" y="{y}" class="t">{escape(lang)}</text>')
-    legend.append(f'<text x="330" y="{y}" class="t" text-anchor="end">{pct:.1f}%</text>')
-    legend.append(f'<text x="430" y="{y}" class="t" text-anchor="end">{n / 1024:,.0f} KB</text>')
-    legend.append(f'<text x="510" y="{y}" class="t" text-anchor="end">{repos_text}</text>')
+    legend.append(f'<circle cx="14" cy="{y - 4}" r="4" fill="{color(lang)}"/>')
+    legend.append(f'<text x="26" y="{y}" class="t">{escape(lang)}</text>')
+    legend.append(f'<text x="220" y="{y}" class="t" text-anchor="end">{pct:.1f}%</text>')
+    legend.append(f'<text x="290" y="{y}" class="t" text-anchor="end">{n / 1024:,.0f} KB</text>')
+    legend.append(f'<text x="370" y="{y}" class="m" text-anchor="end">{repos_text}</text>')
 
-height = ROWS_Y + len(rows) * ROW + 10
-summary = f"{repo_count} repos · {grand / 1024:,.0f} KB of code · {len(totals)} languages"
+height = ROW_Y + len(rows) * ROW + 6
+summary = f"{repo_count} repos · {grand / 1024:,.0f} KB · {len(totals)} languages"
 
 svg = (
-    f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH + 20}" height="{height}">'
-    f'<style>.t{{font:13px Arial,sans-serif;fill:#000}}'
-    f'.h{{font:bold 16px Arial,sans-serif;fill:#000}}'
-    f'.s{{font:12px Arial,sans-serif;fill:#555}}</style>'
-    f'<text x="10" y="24" class="h">Languages</text>'
-    f'<text x="10" y="42" class="s">{escape(summary)}</text>'
+    f'<svg xmlns="http://www.w3.org/2000/svg" width="380" height="{height}">'
+    f'<style>'
+    f'.h{{font:600 13px Arial,sans-serif;fill:#111}}'
+    f'.m{{font:11px Arial,sans-serif;fill:#666}}'
+    f'.t{{font:11px Arial,sans-serif;fill:#222}}'
+    f'</style>'
+    f'<text x="10" y="16" class="h">Languages</text>'
+    f'<text x="10" y="28" class="m">{escape(summary)}</text>'
     + "".join(bar) + "".join(legend) +
     "</svg>"
 )
