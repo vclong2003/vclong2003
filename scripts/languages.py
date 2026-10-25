@@ -9,11 +9,9 @@ USER = os.environ["GH_USER"]
 IGNORE = {"HTML", "CSS"}
 TOP = 6
 
-INCLUDE_ORGS = True  
-INCLUDE_FORKS = (
-    False  
-)
-INCLUDE_COLLAB = False  
+INCLUDE_ORGS = True
+INCLUDE_FORKS = False
+INCLUDE_COLLAB = False
 
 affiliations = ["owner"]
 if INCLUDE_ORGS:
@@ -23,17 +21,17 @@ if INCLUDE_COLLAB:
 AFFILIATION_PARAM = ",".join(affiliations)
 
 COLORS = {
-    "JavaScript": "#f1e05a",
     "TypeScript": "#3178c6",
+    "JavaScript": "#f1e05a",
     "Python": "#3572A5",
     "Java": "#b07219",
+    "Kotlin": "#A97BFF",
     "C#": "#178600",
     "PHP": "#4F5D95",
     "Go": "#00ADD8",
     "Rust": "#dea584",
     "Shell": "#89e051",
     "Dart": "#00B4AB",
-    "Kotlin": "#A97BFF",
     "Swift": "#F05138",
     "Ruby": "#701516",
     "C++": "#f34b7d",
@@ -59,7 +57,6 @@ def api(url):
 def all_repos():
     page = 1
     while True:
-        # visibility=all pulls BOTH public and private
         url = (
             f"https://api.github.com/user/repos"
             f"?visibility=all"
@@ -71,7 +68,6 @@ def all_repos():
             break
 
         for repo in batch:
-            # Skip forks unless explicitly allowed (forks often pull huge vendor codebases)
             if repo.get("fork") and not INCLUDE_FORKS:
                 continue
             yield repo["full_name"]
@@ -93,7 +89,6 @@ for name in all_repos():
             totals[lang] += size
             repos_using[lang].add(name)
     except Exception:
-        # Ignore repos where language stats fail to load or permissions are restricted
         continue
 
 grand = sum(totals.values()) or 1
@@ -108,12 +103,12 @@ if rest > 0:
 CARD_WIDTH = 460
 BAR_WIDTH = 400
 BAR_X = 30
-BAR_Y = 64
+BAR_Y = 66
 BAR_HEIGHT = 10
 GRID_START_Y = 104
-ROW_HEIGHT = 26
+ROW_HEIGHT = 28
 
-# Render Segmented Progress Bar
+# Render Bar Segments
 bar_segments = []
 current_x = 0.0
 for lang, n in rows:
@@ -124,7 +119,7 @@ for lang, n in rows:
     )
     current_x += w
 
-# Render Language Grid (2 Columns)
+# Render Language 2-Column Grid
 legend = []
 COL_X = [30, 240]
 
@@ -137,7 +132,7 @@ for i, (lang, n) in enumerate(rows):
     color = OTHER_COLOR if lang == "Other" else COLORS.get(lang, FALLBACK)
     pct = (n / grand) * 100
 
-    legend.append(f'<circle cx="{x + 5}" cy="{y - 4}" r="4.5" fill="{color}"/>')
+    legend.append(f'<circle cx="{x + 5}" cy="{y - 4}" r="5" fill="{color}"/>')
     legend.append(
         f'<text x="{x + 18}" y="{y}" class="lang-name">{escape(lang)}</text>'
     )
@@ -153,6 +148,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{
     :root {{
       --bg: #ffffff;
       --border: #d0d7de;
+      --track: #ebedf0;
       --title: #1f2328;
       --sub: #656d76;
       --pct: #57606a;
@@ -161,6 +157,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{
       :root {{
         --bg: #0d1117;
         --border: #30363d;
+        --track: #21262d;
         --title: #f0f6fc;
         --sub: #8b949e;
         --pct: #7d8590;
@@ -169,8 +166,8 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{
     .bg {{ fill: var(--bg); stroke: var(--border); stroke-width: 1px; rx: 8px; }}
     .title {{ font: 600 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
     .sub {{ font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--sub); }}
-    .lang-name {{ font: 500 12.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
-    .lang-pct {{ font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--pct); text-anchor: end; }}
+    .lang-name {{ font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
+    .lang-pct {{ font: 400 12.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--pct); text-anchor: end; }}
   </style>
 
   <!-- Card Background -->
@@ -180,17 +177,22 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{
   <text x="30" y="32" class="title">Most Used Languages</text>
   <text x="30" y="48" class="sub">Across all {repo_count} repositories</text>
 
-  <!-- Bar Track -->
+  <!-- Progress Bar (Fixed Clip Path) -->
   <defs>
     <clipPath id="bar-clip">
-      <rect x="{BAR_X}" y="{BAR_Y}" width="{BAR_WIDTH}" height="{BAR_HEIGHT}" rx="5" ry="5"/>
+      <rect x="0" y="0" width="{BAR_WIDTH}" height="{BAR_HEIGHT}" rx="5" ry="5"/>
     </clipPath>
   </defs>
-  <g clip-path="url(#bar-clip)" transform="translate({BAR_X}, {BAR_Y})">
-    {''.join(bar_segments)}
+
+  <!-- Background Track + Colored Segments -->
+  <g transform="translate({BAR_X}, {BAR_Y})">
+    <rect width="{BAR_WIDTH}" height="{BAR_HEIGHT}" rx="5" fill="var(--track)"/>
+    <g clip-path="url(#bar-clip)">
+      {''.join(bar_segments)}
+    </g>
   </g>
 
-  <!-- Languages 2-Column Grid -->
+  <!-- Language Grid -->
   {''.join(legend)}
 </svg>
 """
