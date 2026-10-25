@@ -1,1 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="308"><style>.t{font:13px Arial,sans-serif;fill:#000}.h{font:bold 16px Arial,sans-serif;fill:#000}.s{font:12px Arial,sans-serif;fill:#555}</style><text x="10" y="24" class="h">Languages</text><text x="10" y="42" class="s">60 repos · 3,221 KB of code · 16 languages</text><rect x="0.00" y="56" width="250.53" height="14" fill="#3178c6"/><rect x="250.53" y="56" width="114.77" height="14" fill="#f1e05a"/><rect x="365.30" y="56" width="77.04" height="14" fill="#b07219"/><rect x="442.34" y="56" width="32.69" height="14" fill="#A97BFF"/><rect x="475.03" y="56" width="19.41" height="14" fill="#178600"/><rect x="494.44" y="56" width="16.15" height="14" fill="#4F5D95"/><rect x="510.59" y="56" width="2.28" height="14" fill="#89e051"/><rect x="512.87" y="56" width="2.20" height="14" fill="#438eff"/><rect x="515.07" y="56" width="4.93" height="14" fill="#cccccc"/><rect x="10" y="91" width="10" height="10" fill="#3178c6"/><text x="28" y="100" class="t">TypeScript</text><text x="330" y="100" class="t" text-anchor="end">48.2%</text><text x="430" y="100" class="t" text-anchor="end">1,552 KB</text><text x="510" y="100" class="t" text-anchor="end">20 repos</text><rect x="10" y="113" width="10" height="10" fill="#f1e05a"/><text x="28" y="122" class="t">JavaScript</text><text x="330" y="122" class="t" text-anchor="end">22.1%</text><text x="430" y="122" class="t" text-anchor="end">711 KB</text><text x="510" y="122" class="t" text-anchor="end">36 repos</text><rect x="10" y="135" width="10" height="10" fill="#b07219"/><text x="28" y="144" class="t">Java</text><text x="330" y="144" class="t" text-anchor="end">14.8%</text><text x="430" y="144" class="t" text-anchor="end">477 KB</text><text x="510" y="144" class="t" text-anchor="end">6 repos</text><rect x="10" y="157" width="10" height="10" fill="#A97BFF"/><text x="28" y="166" class="t">Kotlin</text><text x="330" y="166" class="t" text-anchor="end">6.3%</text><text x="430" y="166" class="t" text-anchor="end">203 KB</text><text x="510" y="166" class="t" text-anchor="end">13 repos</text><rect x="10" y="179" width="10" height="10" fill="#178600"/><text x="28" y="188" class="t">C#</text><text x="330" y="188" class="t" text-anchor="end">3.7%</text><text x="430" y="188" class="t" text-anchor="end">120 KB</text><text x="510" y="188" class="t" text-anchor="end">3 repos</text><rect x="10" y="201" width="10" height="10" fill="#4F5D95"/><text x="28" y="210" class="t">PHP</text><text x="330" y="210" class="t" text-anchor="end">3.1%</text><text x="430" y="210" class="t" text-anchor="end">100 KB</text><text x="510" y="210" class="t" text-anchor="end">2 repos</text><rect x="10" y="223" width="10" height="10" fill="#89e051"/><text x="28" y="232" class="t">Shell</text><text x="330" y="232" class="t" text-anchor="end">0.4%</text><text x="430" y="232" class="t" text-anchor="end">14 KB</text><text x="510" y="232" class="t" text-anchor="end">3 repos</text><rect x="10" y="245" width="10" height="10" fill="#438eff"/><text x="28" y="254" class="t">Objective-C</text><text x="330" y="254" class="t" text-anchor="end">0.4%</text><text x="430" y="254" class="t" text-anchor="end">14 KB</text><text x="510" y="254" class="t" text-anchor="end">6 repos</text><rect x="10" y="267" width="10" height="10" fill="#cccccc"/><text x="28" y="276" class="t">Other</text><text x="330" y="276" class="t" text-anchor="end">0.9%</text><text x="430" y="276" class="t" text-anchor="end">31 KB</text><text x="510" y="276" class="t" text-anchor="end"></text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="226" viewBox="0 0 460 226">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --border: #d0d7de;
+      --title: #1f2328;
+      --sub: #656d76;
+      --pct: #57606a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --border: #30363d;
+        --title: #f0f6fc;
+        --sub: #8b949e;
+        --pct: #7d8590;
+      }
+    }
+    .bg { fill: var(--bg); stroke: var(--border); stroke-width: 1px; rx: 8px; }
+    .title { font: 600 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }
+    .sub { font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--sub); }
+    .lang-name { font: 500 12.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }
+    .lang-pct { font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--pct); text-anchor: end; }
+  </style>
+
+  <!-- Card Background -->
+  <rect width="460" height="226" class="bg"/>
+
+  <!-- Card Header -->
+  <text x="30" y="32" class="title">Most Used Languages</text>
+  <text x="30" y="48" class="sub">Across all 65 repositories</text>
+
+  <!-- Bar Track -->
+  <defs>
+    <clipPath id="bar-clip">
+      <rect x="30" y="64" width="400" height="10" rx="5" ry="5"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#bar-clip)" transform="translate(30, 64)">
+    <rect x="0.00" y="0" width="221.73" height="10" fill="#3178c6"/><rect x="221.73" y="0" width="75.60" height="10" fill="#f1e05a"/><rect x="297.33" y="0" width="50.55" height="10" fill="#b07219"/><rect x="347.88" y="0" width="21.71" height="10" fill="#A97BFF"/><rect x="369.59" y="0" width="12.74" height="10" fill="#178600"/><rect x="382.33" y="0" width="10.59" height="10" fill="#4F5D95"/><rect x="392.92" y="0" width="7.08" height="10" fill="#6e7681"/>
+  </g>
+
+  <!-- Languages 2-Column Grid -->
+  <circle cx="35" cy="100" r="4.5" fill="#3178c6"/><text x="48" y="104" class="lang-name">TypeScript</text><text x="205" y="104" class="lang-pct">55.4%</text><circle cx="245" cy="100" r="4.5" fill="#f1e05a"/><text x="258" y="104" class="lang-name">JavaScript</text><text x="415" y="104" class="lang-pct">18.9%</text><circle cx="35" cy="126" r="4.5" fill="#b07219"/><text x="48" y="130" class="lang-name">Java</text><text x="205" y="130" class="lang-pct">12.6%</text><circle cx="245" cy="126" r="4.5" fill="#A97BFF"/><text x="258" y="130" class="lang-name">Kotlin</text><text x="415" y="130" class="lang-pct">5.4%</text><circle cx="35" cy="152" r="4.5" fill="#178600"/><text x="48" y="156" class="lang-name">C#</text><text x="205" y="156" class="lang-pct">3.2%</text><circle cx="245" cy="152" r="4.5" fill="#4F5D95"/><text x="258" y="156" class="lang-name">PHP</text><text x="415" y="156" class="lang-pct">2.6%</text><circle cx="35" cy="178" r="4.5" fill="#6e7681"/><text x="48" y="182" class="lang-name">Other</text><text x="205" y="182" class="lang-pct">1.8%</text>
+</svg>
