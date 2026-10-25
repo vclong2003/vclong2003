@@ -3,7 +3,7 @@
 </p> -->
 
 
-<img src="languages.svg" alt="Most Used Languages" width="55%" />
+<img src="languages.svg" alt="Most Used Languages" width="60%" />
 
 
 
