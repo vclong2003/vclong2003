@@ -163,7 +163,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{
         --pct: #7d8590;
       }}
     }}
-    .bg {{ fill: var(--bg); stroke: var(--border); stroke-width: 1px; rx: 8px; }}
+    .bg {{ fill: var(--bg); stroke: var(--border); stroke-width: 1px; rx: 4px; }}
     .title {{ font: 600 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
     .sub {{ font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--sub); }}
     .lang-name {{ font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--title); }}
