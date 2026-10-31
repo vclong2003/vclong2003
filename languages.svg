@@ -43,7 +43,7 @@
   <g transform="translate(24, 54)">
     <rect width="372" height="8" rx="4" fill="var(--track)"/>
     <g clip-path="url(#bar-clip)">
-      <rect x="0.00" y="0" width="206.03" height="8" fill="#3178c6"/><rect x="206.03" y="0" width="70.35" height="8" fill="#f1e05a"/><rect x="276.38" y="0" width="46.97" height="8" fill="#b07219"/><rect x="323.35" y="0" width="20.18" height="8" fill="#A97BFF"/><rect x="343.53" y="0" width="11.83" height="8" fill="#178600"/><rect x="355.36" y="0" width="9.84" height="8" fill="#4F5D95"/><rect x="365.20" y="0" width="1.60" height="8" fill="#89e051"/><rect x="366.80" y="0" width="1.37" height="8" fill="#8b949e"/><rect x="368.17" y="0" width="3.83" height="8" fill="#6e7681"/>
+      <rect x="0.00" y="0" width="206.01" height="8" fill="#3178c6"/><rect x="206.01" y="0" width="70.38" height="8" fill="#f1e05a"/><rect x="276.39" y="0" width="46.96" height="8" fill="#b07219"/><rect x="323.35" y="0" width="20.18" height="8" fill="#A97BFF"/><rect x="343.53" y="0" width="11.83" height="8" fill="#178600"/><rect x="355.36" y="0" width="9.84" height="8" fill="#4F5D95"/><rect x="365.21" y="0" width="1.60" height="8" fill="#89e051"/><rect x="366.80" y="0" width="1.37" height="8" fill="#8b949e"/><rect x="368.17" y="0" width="3.83" height="8" fill="#6e7681"/>
     </g>
   </g>
 
